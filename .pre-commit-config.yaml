@@ -5,3 +5,4 @@ repos:
     - id: terraform_fmt
     - id: terraform_tfsec
       args: ['--args=-s']
+      verbose: true
