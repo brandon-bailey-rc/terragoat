@@ -35,7 +35,11 @@
  pre-commit:
    parallel: true
    commands:
-   scripts:
-     glob: "*.{tf}"
-     "t_tfsec":
-       runner: tfsec {all_files} 
+    terraform_fmt:
+      run: terraform fmt
+    terraform_tfsec:
+      run: tfsec {all_files} -s
+   #scripts:
+   #  "t_tfsec":
+       #runner: tfsec {all_files} 
+   #    runner: bash

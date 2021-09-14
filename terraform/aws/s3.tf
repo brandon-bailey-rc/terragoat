@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "data" {
   acl           = "public-read"
   force_destroy = true
   versioning {
-    enabled = true
+enabled = true
   }
 
   tags = merge({
