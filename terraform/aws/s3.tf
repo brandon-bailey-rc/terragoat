@@ -6,8 +6,8 @@ resource "aws_s3_bucket" "data" {
   bucket        = "${local.resource_prefix.value}-data"
   acl           = "public-read"
   force_destroy = true
-versioning {
-enabled = true
+  versioning {
+    enabled = true
   }
 
   tags = merge({
@@ -30,7 +30,7 @@ resource "aws_s3_bucket_object" "data_object" {
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
   versioning {
-    enabled = true
+  enabled = true
   }
   server_side_encryption_configuration {
     rule {
