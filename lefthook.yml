@@ -36,6 +36,7 @@
    parallel: true
    commands:
     terraform_fmt:
+      glob: "*.{.tf}"
       run: terraform fmt
     terraform_tfsec:
       run: tfsec -s
